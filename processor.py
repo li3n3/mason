@@ -13,4 +13,4 @@ def grab_tags(filepath):
 
     return tags
 
-grab_tags(test_path)
+print grab_tags(test_path)
