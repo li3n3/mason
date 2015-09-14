@@ -2,6 +2,11 @@ import exifread
 
 test_path = "photos/IMG_0679.jpg"
 
+class GPScoordinates(object):
+    def __init__(self, latitude, longitude):
+        self.latitude = latitude
+        self.longitude = longitude
+
 def grab_tags(filepath):
     """ A wee function to grab the EXIF tags of a given photo when provided with
     the path to that file. """
