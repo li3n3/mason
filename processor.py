@@ -36,4 +36,17 @@ def get_gps_tags(filepath = test_path):
     return gps_tags
 
 
-print grab_tags(test_path)
+def lon_lat_ratio_pair():
+    lon = ''
+    lat = ''
+    for gps_tag in get_gps_tags():
+        if gps_tag == 'GPS GPSLongitude':
+            lon = gps_tag
+        elif gps_tag == 'GPS GPSLatitude':
+            lat = gps_tag
+
+    return [lon, lat]
+
+
+# print grab_tags(test_path)
+print get_gps_tags()
